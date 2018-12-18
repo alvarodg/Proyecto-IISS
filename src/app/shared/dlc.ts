@@ -3,9 +3,11 @@ import { Recompensa } from './recompensa'
 export class DLC {
   titulo: String;
   descripcion: String;
-  recompensas: Recompensas[];
+  recompensas: Recompensa[];
 
-  constructor() {
-    //Terminar
+  constructor(titulo: String, descripcion: String, recompensas: Recompensa[]) {
+    this.titulo = titulo;
+    this.descripcion = descripcion;
+    this.recompensas = recompensas;
   }
 }

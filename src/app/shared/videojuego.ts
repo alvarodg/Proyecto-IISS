@@ -29,4 +29,12 @@ export class Videojuego {
   addRecompensa(recompensa: Recompensa) {
     this.recompensas.push(recompensa);
   }
+  
+  showRecompensasConseguidas(){
+    //??
+  }
+  
+  showJuegosCompletados(){
+    //?????
+  }
 }
