@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { AppComponent } from './app.component';
 import { JugadorComponent } from './jugador/jugador.component';
 import { VideojuegoComponent } from './videojuego/videojuego.component';
+import { JugadorService } from './services/jugador.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { VideojuegoComponent } from './videojuego/videojuego.component';
     FlexLayoutModule,
     MatListModule
   ],
-  providers: [],
+  providers: [JugadorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

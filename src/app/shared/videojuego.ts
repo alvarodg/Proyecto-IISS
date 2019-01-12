@@ -18,7 +18,7 @@ export class Videojuego {
     this.descripcion = descripcion;
     this.generos = generos;
     this.plataforma = plataforma;
-    this.jugadores = new Array<String>;
+    this.jugadores = new Array<String>();
   }
 
   addJugador(idjugador: String) {

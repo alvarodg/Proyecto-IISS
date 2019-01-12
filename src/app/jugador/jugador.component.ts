@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Jugador } from '../shared/jugador';
-import { JUGADORES } from '../shared/jugadores';
-
+import {JugadorService} from '../services/jugador.service';
 
 @Component({
   selector: 'app-jugador',
   templateUrl: './jugador.component.html',
   styleUrls: ['./jugador.component.scss']
 })
-export class JugadorComponent implements OnInit {
 
-  jugadores = JUGADORES;
-  selectedJugador = JUGADORES[0];
+export class JugadorComponent implements OnInit {
   
-  constructor() { }
+  jugadores: Jugador[];
+  selectedJugador: Jugador;
+  
+  constructor(private jugadorService : JugadorService) { }
 
   ngOnInit() {
+    this.jugadores = this.jugadorService.getJugadores();
+    this.selectedJugador = this.jugadores[0];
   }
   
   onSelect(jugador: Jugador) {

@@ -22,7 +22,7 @@ export class Jugador {
     this.juegos = new Array<String>();
   }
 
-  addVideojuego(idJuego: Juego) {
-    this.juegos.push(juego);
+  addVideojuego(idJuego: String) {
+    this.juegos.push(idJuego);
   }
 }
