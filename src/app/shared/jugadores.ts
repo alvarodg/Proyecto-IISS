@@ -22,7 +22,9 @@ export const JUGADORES: Jugador[] = [
           author: 'Autor del comentario 2',
           date: '19/11/2018'
         }*/
-      ]
+      ],
+      addVideojuego: Jugador.prototype.addVideojuego
+      
     },
     
     { 
@@ -46,7 +48,7 @@ export const JUGADORES: Jugador[] = [
           author: 'Autor del comentario 2',
           date: '19/11/2018'
         }*/
-      ]
+      ],
+      addVideojuego: Jugador.prototype.addVideojuego
     },
-}
-]
+];

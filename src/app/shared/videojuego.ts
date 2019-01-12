@@ -3,26 +3,29 @@ import { DLC } from './dlc'
 import { Recompensa } from './recompensa'
 
 export class Videojuego {
+  id: String;
   titulo: String;
   descripcion: String;
   generos: String[];
   plataforma: String;
-  jugadores: Jugador[];
-  dlcs: DLC[];
-  recompensas: Recompensa[];
+  jugadores: String[];
+  /*dlcs: DLC[];
+  recompensas: Recompensa[];*/
 
-  constructor(titulo: String, descripcion: String, generos: String[], plataforma: String) {
+  constructor(id: String, titulo: String, descripcion: String, generos: String[], plataforma: String) {
+    this.id = id;
     this.titulo = titulo;
     this.descripcion = descripcion;
     this.generos = generos;
     this.plataforma = plataforma;
+    this.jugadores = new Array<String>;
   }
 
-  addJugador(jugador: Jugador) {
-    this.jugadores.push(jugador);
+  addJugador(idjugador: String) {
+    this.jugadores.push(idjugador);
   }
 
-  addDLC(dlc: DLC) {
+  /*addDLC(dlc: DLC) {
     this.dlcs.push(dlc);
   }
 
@@ -36,5 +39,5 @@ export class Videojuego {
   
   showJuegosCompletados(){
     //?????
-  }
+  }*/
 }
