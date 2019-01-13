@@ -21,6 +21,7 @@ export class JugadorComponent implements OnInit {
       nickname: 'Nickname0',
       avatar: 'assets/images/avatar0.jpg',
       email: 'Email0',
+      fecha_nac: '00/00/00'
       
     });
     this.jugadorService.addJugador({
@@ -37,5 +38,17 @@ export class JugadorComponent implements OnInit {
   
   onSelect(jugador: Jugador) {
     this.selectedJugador = jugador;
+  }
+  
+  addJugador(nombre, nickname, avatar, email)
+  { 
+    this.jugadorService.addJugador({
+      nombre: 'Nombre0',
+      nickname: 'Nickname0',
+      avatar: 'assets/images/avatar0.jpg',
+      email: 'Email0',
+      fecha_nac: '00/00/00'
+      
+    });
   }
 }

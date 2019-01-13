@@ -2,13 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let jugador = new Schema({
-  id: {
-    type: String
-  },
+
   nombre: {
-    type: String
-  },
-  apellidos: {
     type: String
   },
   nickname: {
@@ -22,10 +17,8 @@ let jugador = new Schema({
   },
   fecha_nac: {
     type: String
-  },
-  videojuegos: {
-    type: Array
-  },
+  }
+  
 },{
     collection: 'jugador'
 });
