@@ -17,31 +17,20 @@ export class JugadorComponent implements OnInit {
 
   ngOnInit() {
     this.jugadorService.addJugador({
-      id: '0',
       nombre: 'Nombre0',
-      apellidos: 'Apellidos0',
       nickname: 'Nickname0',
       avatar: 'assets/images/avatar0.jpg',
       email: 'Email0',
-      fecha_nac: '00/00/0000',
-      juegos: [
-      ],
-      addVideojuego: Jugador.prototype.addVideojuego
       
     });
     this.jugadorService.addJugador({
-      id: '0',
       nombre: 'Nombre0',
-      apellidos: 'Apellidos0',
       nickname: 'Nickname0',
       avatar: 'assets/images/avatar0.jpg',
       email: 'Email0',
-      fecha_nac: '00/00/0000',
-      juegos: [
-      ],
-      addVideojuego: Jugador.prototype.addVideojuego
       
     });
+      
     this.jugadorService.getJugadores().
     subscribe((data: Jugador[]) => { this.jugadores = data;});
   }

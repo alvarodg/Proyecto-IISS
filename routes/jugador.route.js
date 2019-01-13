@@ -42,14 +42,11 @@ jugadorRoutes.route('/update/:id').post(function (req, res) {
     if (!jugador)
       return next(new Error('Could not load Document'));
     else {
-        jugador.id = req.body.id;
         jugador.nombre = req.body.nombre;
-        jugador.apellidos = req.body.apellidos;
         jugador.nickname = req.body.nickname;
         jugador.avatar = req.body.avatar;
         jugador.email = req.body.email;
         jugador.fecha_nac = req.body.fecha_nac;
-        jugador.videojuegos = req.body.videojuegos;
         
         jugador.save().then(jugador => {
           res.json('Update complete');
