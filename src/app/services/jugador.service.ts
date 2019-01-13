@@ -28,8 +28,13 @@ export class JugadorService {
         .subscribe(res => console.log('Done'));
     }
   
-    getJugadores() : Jugador[]{
-        return JUGADORES;
+    getJugadores() {
+        console.log("Llega");
+        return this.http.get(`${this.uri}`);
     }
+    
+    /*getJugadores() : Jugador[]{
+        return JUGADORES;
+    }*/
   
 }

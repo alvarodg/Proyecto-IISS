@@ -17,9 +17,9 @@ const express = require('express'),
 
     app.use(bodyParser.json());
     app.use(cors());
+    app.use('/addJugador', jugadorRoutes);
     const port = process.env.PORT || 4000;
 
-    app.use('/addJugador', jugadorRoutes);
 
     const server = app.listen(port, function(){
      console.log('Listening on port ' + port);
