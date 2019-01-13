@@ -1,0 +1,25 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <label>
+    Nombre:
+    <input type="text" formControlName="nombre">
+  </label>
+
+  <label>
+    Nickname:
+    <input type="text" formControlName="nickname">
+  </label>
+
+  <label>
+    Email:
+    <input type="text" formControlName="email">
+  </label>
+  
+  <label>
+    Fecha de nacimiento:
+    <input type="text" formControlName="fecha_nac">
+  </label>
+  
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+</form>
