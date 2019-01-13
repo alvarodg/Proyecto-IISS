@@ -18,6 +18,7 @@ export class JugadorComponent implements OnInit {
   ngOnInit() {
     this.jugadores = this.jugadorService.getJugadores();
     this.selectedJugador = this.jugadores[0];
+    this.jugadorService.addJugador(this.selectedJugador);
   }
   
   onSelect(jugador: Jugador) {
