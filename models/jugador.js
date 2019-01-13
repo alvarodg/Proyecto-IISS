@@ -21,7 +21,7 @@ let jugador = new Schema({
     type: String
   },
   fecha_nac: {
-    type: Date
+    type: String
   },
   videojuegos: {
     type: Array
