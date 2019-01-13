@@ -30,9 +30,9 @@ export class JugadorComponent implements OnInit {
       
     });
     this.jugadorService.addJugador({
-      id: '0',
-      nombre: 'Nombre0',
-      apellidos: 'Apellidos0',
+      id: '1',
+      nombre: 'Nombre1',
+      apellidos: 'Apellidos1',
       nickname: 'Nickname0',
       avatar: 'assets/images/avatar0.jpg',
       email: 'Email0',
@@ -44,8 +44,10 @@ export class JugadorComponent implements OnInit {
     });
     this.jugadorService.getJugadores().
     subscribe((data: Jugador[]) => { this.jugadores = data;});
+    
   }
   
+    
   onSelect(jugador: Jugador) {
     this.selectedJugador = jugador;
   }

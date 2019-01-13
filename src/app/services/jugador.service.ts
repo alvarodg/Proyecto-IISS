@@ -33,6 +33,30 @@ export class JugadorService {
         return this.http.get(`${this.uri}`);
     }
     
+    editJugador(id) {
+    return this
+            .http
+            .get(`${this.uri}/edit/${id}`);
+    }
+    
+    updateJugador(nombre, apellidos, nickname, avatar, email, fecha_nac, videojuegos,id) {
+
+        const obj = {
+            nombre: nombre,
+            apellidos: apellidos,
+            nickname: nickname,
+            avatar: avatar,
+            email: email,
+            fecha_nac: fecha_nac,
+            videojuegos: videojuegos,
+          };
+        this
+          .http
+          .post(`${this.uri}/update/${id}`, obj)
+          .subscribe(res => console.log('Done'));
+  }
+
+    
     /*getJugadores() : Jugador[]{
         return JUGADORES;
     }*/
