@@ -18,7 +18,9 @@
           <img matListAvatar src={{jugador.avatar}} alt={{jugador.nickname}}>
           <h1 matLine>{{jugador.nickname}}</h1>
           <p matLine> 
-            Nombre: {{jugador.nombre}}  <a [routerLink]="['edit', jugador._id]">Editar</a> <button (click)="deleteJugador(jugador._id)">Borrar</button>
+            Nombre: {{jugador.nombre}}  
+            <a [routerLink]="['edit', jugador._id]" class="btn btn-primary">Editar</a> 
+            <button (click)="deleteJugador(jugador._id)">Borrar</button>
 
           </p>
       </mat-list-item>

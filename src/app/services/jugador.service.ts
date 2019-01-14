@@ -41,6 +41,7 @@ export class JugadorService {
     const obj = {
         nombre: nombre,
         nickname: nickname,
+        avatar: 'assets/images/avatar0',
         email: email,
         fecha_nac: fecha_nac
       };
@@ -51,7 +52,9 @@ export class JugadorService {
     }
     
     deleteJugador(id) {
-        return this.http.get`${this.uri}/delete/${id}`);
+         return this
+              .http
+              .get(`${this.uri}/delete/${id}`);
     }
     
     /*getJugadores() : Jugador[]{

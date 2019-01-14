@@ -15,21 +15,14 @@ export class JugadorComponent implements OnInit {
   constructor(private jugadorService : JugadorService) { }
 
   ngOnInit() {
-    this.jugadorService.addJugador({
-      nombre: 'Nombre0',
-      nickname: 'Nickname0',
-      avatar: 'assets/images/avatar0.jpg',
-      email: 'Email0',
-      fecha_nac: '00/00/00'
-      
-    });
-      
     this.jugadorService.getJugadores().
     subscribe((data: Jugador[]) => { this.jugadores = data;});
   }
   
   deleteJugador(id) {
-    this.jugadorService.deleteJugador(id).subscribe(res => console.log("Borrado"));
+    this.jugadorService.deleteJugador(id).subscribe(res => {console.log("Borrado");});
+    this.jugadorService.getJugadores().
+    subscribe((data: Jugador[]) => { this.jugadores = data;});
   }
   
   
