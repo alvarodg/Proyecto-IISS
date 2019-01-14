@@ -1,0 +1,3 @@
+Lanzar nodemon (o ng serve)
+Lanzar nodemon server
+Lanzar mongod (lanzar mongo para ver datos)
