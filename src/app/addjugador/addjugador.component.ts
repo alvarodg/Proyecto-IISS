@@ -26,7 +26,7 @@ export class AddjugadorComponent implements OnInit {
                nickname: this.profileForm.get('nickname').value,
                avatar: 'assets/images/avatar0.jpg',
                email: this.profileForm.get('email').value,
-               fecha_nac: this.profileForm.get('fecha_nac').value)
+               fecha_nac: this.profileForm.get('fecha_nac').value
                });
   }  
     

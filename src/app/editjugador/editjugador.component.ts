@@ -15,7 +15,7 @@ export class EditjugadorComponent implements OnInit {
     nombre: new FormControl(''),
     nickname: new FormControl(''),
     email: new FormControl(''),
-    fecha_nac: new FormControl('');
+    fecha_nac: new FormControl('')
   });
   
  
@@ -34,7 +34,7 @@ export class EditjugadorComponent implements OnInit {
     nombre: new FormControl(''),
     nickname: new FormControl(''),
     email: new FormControl(''),
-    fecha_nac: new FormControl('');
+    fecha_nac: new FormControl('')
         });
     }
 
