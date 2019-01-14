@@ -30,6 +30,30 @@ export class JugadorService {
         return this.http.get(`${this.uri}`);
     }
     
+    editJugador(id) {
+        return this
+            .http
+            .get(`${this.uri}/edit/${id}`);
+    }
+    
+    updateJugador(nombre, nickname, email, fecha_nac, id) {
+
+    const obj = {
+        nombre: nombre,
+        nickname: nickname,
+        email: email,
+        fecha_nac: fecha_nac
+      };
+    this
+      .http
+      .post(`${this.uri}/update/${id}`, obj)
+      .subscribe(res => console.log('Done'));
+    }
+    
+    deleteJugador(id) {
+        return this.http.get`${this.uri}/delete/${id}`);
+    }
+    
     /*getJugadores() : Jugador[]{
         return JUGADORES;
     }*/

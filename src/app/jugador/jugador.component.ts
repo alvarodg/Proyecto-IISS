@@ -11,7 +11,6 @@ import {JugadorService} from '../services/jugador.service';
 export class JugadorComponent implements OnInit {
   
   jugadores: Jugador[];
-  selectedJugador: Jugador;
   
   constructor(private jugadorService : JugadorService) { }
 
@@ -24,20 +23,13 @@ export class JugadorComponent implements OnInit {
       fecha_nac: '00/00/00'
       
     });
-    this.jugadorService.addJugador({
-      nombre: 'Nombre0',
-      nickname: 'Nickname0',
-      avatar: 'assets/images/avatar0.jpg',
-      email: 'Email0',
-      
-    });
       
     this.jugadorService.getJugadores().
     subscribe((data: Jugador[]) => { this.jugadores = data;});
   }
   
-  onSelect(jugador: Jugador) {
-    this.selectedJugador = jugador;
+  deleteJugador(id) {
+    this.jugadorService.deleteJugador(id).subscribe(res => console.log("Borrado"));
   }
   
   

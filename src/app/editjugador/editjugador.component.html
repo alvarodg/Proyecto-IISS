@@ -1,0 +1,26 @@
+<form [formGroup]="profileForm">
+
+  <label>
+    Nombre:
+    <input type="text" formControlName="nombre" #nombre [(ngModel)] = "jugador.nombre">
+  </label>
+
+  <label>
+    Nickname:
+    <input type="text" formControlName="nickname" #nickname [(ngModel)] = "jugador.nickname">
+  </label>
+
+  <label>
+    Email:
+    <input type="text" formControlName="email" #email [(ngModel)] = "jugador.email">
+  </label>
+  
+  <label>
+    Fecha de nacimiento:
+    <input type="text" formControlName="fecha_nac" #fecha_nac [(ngModel)] = "jugador.fecha_nac">
+  </label>
+  
+  <button (click)="updateJugador(nombre.value, nickname.value, email.value, fecha_nac.value)"
+   [disabled]="profileForm.invalid" class="btn btn-primary">Actualizar</button>
+
+</form>

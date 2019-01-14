@@ -15,6 +15,8 @@ import { JugadorComponent } from './jugador/jugador.component';
 import { VideojuegoComponent } from './videojuego/videojuego.component';
 import { JugadorService } from './services/jugador.service';
 import { AddjugadorComponent } from './addjugador/addjugador.component';
+import { EditjugadorComponent } from './editjugador/editjugador.component';
+import {AppRoutingModule} from './app-routing/app-routing.module';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { AddjugadorComponent } from './addjugador/addjugador.component';
     AppComponent,
     JugadorComponent,
     VideojuegoComponent,
-    AddjugadorComponent
+    AddjugadorComponent,
+    EditjugadorComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,9 @@ import { AddjugadorComponent } from './addjugador/addjugador.component';
     HttpClientModule,
     MatSelectModule,
     MatSlideToggleModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
+
   ],
   providers: [JugadorService],
   bootstrap: [AppComponent]
