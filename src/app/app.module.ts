@@ -17,6 +17,8 @@ import { JugadorService } from './services/jugador.service';
 import { AddjugadorComponent } from './addjugador/addjugador.component';
 import { EditjugadorComponent } from './editjugador/editjugador.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
     JugadorComponent,
     VideojuegoComponent,
     AddjugadorComponent,
-    EditjugadorComponent
+    EditjugadorComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

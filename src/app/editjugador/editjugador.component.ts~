@@ -20,7 +20,7 @@ export class EditjugadorComponent implements OnInit {
   
  
   jugador: any = {};
- // profileForm: FormGroup;
+  profileForm: FormGroup;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
