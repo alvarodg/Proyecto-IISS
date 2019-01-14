@@ -14,7 +14,7 @@ export class AddjugadorComponent implements OnInit {
     nombre: new FormControl(''),
     nickname: new FormControl(''),
     email: new FormControl(''),
-    fecha_nac: new FormControl('');
+    fecha_nac: new FormControl('')
   });
   
   

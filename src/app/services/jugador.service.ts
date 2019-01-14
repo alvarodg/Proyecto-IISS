@@ -41,7 +41,7 @@ export class JugadorService {
     const obj = {
         nombre: nombre,
         nickname: nickname,
-        avatar: 'assets/images/avatar0',
+        avatar: "assets/images/avatar0.jpg",
         email: email,
         fecha_nac: fecha_nac
       };

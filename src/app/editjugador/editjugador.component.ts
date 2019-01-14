@@ -51,4 +51,5 @@ export class EditjugadorComponent implements OnInit {
       this.jugadorService.updateJugador(nombre, nickname, email, fecha_nac, params['id']);
       this.router.navigate(['jugadores']);
     });
+    }
 }

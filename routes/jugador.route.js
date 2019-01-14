@@ -38,7 +38,7 @@ jugadorRoutes.route('/edit/:id').get(function (req, res) {
 
 //  Defined update route
 jugadorRoutes.route('/update/:id').post(function (req, res) {
-    jugadorModel.findById(req.params.id, function(err, next, jugador) {
+    jugadorModel.findById(req.params.id, function(err, jugador, next) {
     if (!jugador)
       return next(new Error('Could not load Document'));
     else {
