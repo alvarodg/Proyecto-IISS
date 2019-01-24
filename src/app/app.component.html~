@@ -20,3 +20,5 @@
   <router-outlet></router-outlet>
 </div>
 <!--<app-addjugador></app-addjugador><app-editjugador></app-editjugador><app-jugador></app-jugador>-->
+<app-header></app-header>
+<app-footer></app-footer>

@@ -1,8 +1,41 @@
-<mat-toolbar color="primary">
- 
+<mat-toolbar color="accent">
+
+@Component({
+  selector: 'menu-overview-example',
+  templateUrl: 'menu-overview-example.html',
+  styleUrls: ['menu-overview-example.css'],
+})
+export class MenuOverviewExample {}
+
+
+<button mat-button><a routerLink="jugadores/add"> Crear jugador</a></button>
+<button mat-button><a routerLink="jugadores"> Lista de jugadores</a></button>
+
+<!--
+ <button mat-raised-button color="warn" ><a routerLink="jugadores/add"> Crear jugador</a></button>
+ <button class="btn btn-success pull-right" ><a routerLink="jugadores"> Lista de jugadores</a></button>
+
+  <button mat-raised-button color="warn">Crear Jugador</button>
+  <button mat-raised-button color="primary">Lista de Jugadores</button> -->
+
 
 </mat-toolbar>
 
 <div class="container jumbotron"
+    fxLayout="row"
+    fxLayout.sm="column" 
+    fxLayout.xs="column" 
+    fxLayoutAlign.xs="start center"
+    fxLayoutAlign.sm="start center" 
+    fxLayoutAlign.gt-sm="center center" 
+    fxLayoutGap="10px">
 
+  <div fxFlex fxFlex.gt-sm="50%">
+    <h1>** Mundo videojuego **</h1>
+    <p></p>
+  </div>
+  <div fxFlex fxFlex.gt-sm="5%">
+    <img src="../../assets/images/logo.png" alt="Logo">
+  </div>
+  <div fxFlex></div>
 </div>

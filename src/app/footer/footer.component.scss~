@@ -9,8 +9,7 @@ $background-pale: #009688;
 }
 
 .footer{
-  // background-color: $background-pale;
-  background-color: mat-color(primary);
+    background-color: $background-pale;
     @include zero-margin(20px, 0px);
 }
 
