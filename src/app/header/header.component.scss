@@ -12,5 +12,10 @@ $background-pale: #009688;
     @include zero-margin(70px,30px);
     background: $background-light ;
     color:floralwhite;
-    min-height: 150px;
+    min-height: 100px;
+}
+
+.center {
+    display: block;
+    margin: auto;
 }
