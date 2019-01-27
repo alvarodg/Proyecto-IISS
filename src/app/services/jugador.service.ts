@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Jugador } from '../shared/jugador';
+import { WINDOW } from '../shared/windowproviders';
 //import { JUGADORES } from '../shared/jugadores';
 
 @Injectable({
@@ -8,10 +9,11 @@ import { Jugador } from '../shared/jugador';
 })
 export class JugadorService {
 
-    
     uri = 'http://localhost:4000/addJugador';
 
-    constructor(private http: HttpClient) { }
+    constructor(@Inject(WINDOW) private window: Window, private http: HttpClient) { 
+        this.uri = 'http://'+this.window.location.hostname+':4000/addJugador';
+    }
 
     addJugador(jugador: Jugador) {
         const jugadorJSON = {

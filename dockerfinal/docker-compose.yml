@@ -13,6 +13,7 @@ services:
   - "4000:4000" #specify ports mapping
   links:
   - database # link this service to the database service
+  command: ["./wait-for-it.sh", "database:27017"]
  
  database: # name of the third service
   image: mongo # specify image to build container from

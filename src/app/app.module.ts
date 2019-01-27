@@ -20,6 +20,7 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { WINDOW_PROVIDERS } from './shared/windowproviders';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,10 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule
 
   ],
-  providers: [JugadorService],
+  providers: [
+    WINDOW_PROVIDERS,
+    JugadorService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
